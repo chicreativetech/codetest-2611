@@ -1,0 +1,57 @@
+@use 'abstracts' as *;
+
+.viewport {
+  overflow: hidden;
+  transition: height 500ms ease-in-out;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+.list {
+  margin: 0;
+  padding: 10px 0 0;
+  list-style: none;
+}
+
+.item {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 5px 0px;
+  border: none;
+  outline: none;
+  background: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  color: $color-text-muted;
+  text-decoration: none;
+
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  &:hover,
+  &:focus-visible {
+    background: $color-surface;
+
+    &:before {
+      transform: rotate(0deg) scale(1);
+      transition: transform 400ms;
+      margin-left: 0;
+    }
+  }
+
+  &:before {
+    content: ' ';
+    width: 10px;
+    height: 10px;
+    background: $color-search-indicator;
+    transform: rotate(0deg) scale(0);
+    transition: transform 400ms 100ms;
+    margin-left: 0;
+    display: block;
+  }
+}

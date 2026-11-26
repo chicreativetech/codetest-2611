@@ -1,0 +1,33 @@
+@use 'abstracts' as *;
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 30px 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 680 / 1000;
+  object-fit: cover;
+  border: 2px solid $color-foreground;
+  background: $color-surface;
+  color: $color-text-muted;
+  font-size: 40px;
+}
+
+.name {
+  margin-top: 10px;
+  font-weight: $font-weight-semibold;
+}
+
+.character {
+  color: $color-text-muted;
+  font-size: 14px;
+}

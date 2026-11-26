@@ -5,14 +5,14 @@
   inset: 0;
   z-index: 0;
   overflow: hidden;
-  background-color: #000000;
+  background-color: $color-background;
   max-width: 1920px;
   margin: 0 auto;
 }
 
 .poster {
   position: absolute;
-  border: max(10px, 4px) solid #ffffff;
+  border: max(10px, 4px) solid $color-foreground;
   top: 50%;
   left: 50%;
   aspect-ratio: 680 / 1000;

@@ -1,0 +1,108 @@
+@use 'abstracts' as *;
+
+.page {
+  min-height: 100vh;
+  padding: 30px;
+  background: $color-background;
+
+  @include up(md) {
+    padding: 60px 30px;
+  }
+}
+
+.content {
+  max-width: $content-max-width;
+  margin: 0 auto;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: $color-text-muted;
+  text-decoration: none;
+  transition: color 200ms;
+
+  &:hover,
+  &:focus-visible {
+    color: $color-foreground;
+  }
+}
+
+.message {
+  margin-top: 60px;
+  color: $color-text-muted;
+}
+
+.hero {
+  display: grid;
+  gap: 30px;
+  margin-top: 30px;
+
+  @include up(md) {
+    grid-template-columns: 320px 1fr;
+    gap: 60px;
+    align-items: start;
+    margin-top: 60px;
+  }
+}
+
+.poster {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 680 / 1000;
+  object-fit: cover;
+  border: 10px solid $color-foreground;
+  background: $color-surface;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: $font-weight-bold;
+
+  @include up(md) {
+    font-size: 48px;
+  }
+}
+
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+  color: $color-text-muted;
+}
+
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.genre {
+  padding: 5px 10px;
+  border: 2px solid $color-foreground;
+  font-size: 14px;
+}
+
+.summary {
+  max-width: 65ch;
+  margin-top: 30px;
+  line-height: 1.6;
+}
+
+.section {
+  margin-top: 60px;
+}
+
+.heading {
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: $font-weight-bold;
+}

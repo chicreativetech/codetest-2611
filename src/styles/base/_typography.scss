@@ -4,8 +4,8 @@ body {
   font-family: $font-family;
   font-size: 1rem;
   line-height: 1.5;
-  color: #fff;
-  background-color: #000;
+  color: $color-foreground;
+  background-color: $color-background;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
