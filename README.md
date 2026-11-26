@@ -2,6 +2,14 @@
 
 React + TypeScript project built with Vite, Sass, [Bootstrap Icons](https://icons.getbootstrap.com/) and Vitest.
 
+## Reflection
+
+This was a fun test. After many months of working with agentic development, I got the opportunity to code manually again. The main thing I noticed was how much slower the development process becomes when writing the code myself. This functionality could probably have been implemented in less than an hour with the help of AI agents. What I gained instead was greater control over the code and, especially, the UI implementation.
+
+What's interesting about an app like this is the possibilities for further development, especially considering what can now be achieved in a short amount of time with the help of AI agents.
+
+Things that come to mind are user accounts with database integration, a rating system, and the ability for users to keep track of which shows and episodes they have watched. The app could also provide personalised recommendations based on genres and shows the user has previously liked.
+
 ## Getting started
 
 ```bash
