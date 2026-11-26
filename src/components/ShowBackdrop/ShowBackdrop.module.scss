@@ -1,0 +1,111 @@
+@use 'abstracts' as *;
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background-color: #000000;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.poster {
+  position: absolute;
+  border: max(10px, 4px) solid #ffffff;
+  top: 50%;
+  left: 50%;
+  aspect-ratio: 680 / 1000;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 800ms 100ms ease-in-out;
+
+  &.loaded {
+    opacity: 1;
+  }
+
+  &:nth-child(1) {
+    transform: translate(-90%, -100%);
+
+    width: 250px;
+  }
+
+  &:nth-child(2) {
+    display: none;
+    width: 250px;
+  }
+
+  &:nth-child(3) {
+    transform: translate(0%, 0%);
+
+    width: 250px;
+  }
+
+  &:nth-child(4) {
+    display: none;
+    width: 250px;
+  }
+
+  &:nth-child(5) {
+    display: none;
+    width: 250px;
+  }
+}
+
+@include up(sm) {
+  .poster {
+    &:nth-child(1) {
+      display: block;
+      transform: translate(-110%, -80%);
+      width: 320px;
+    }
+
+    &:nth-child(3) {
+      display: block;
+      transform: translate(3%, -5%);
+      width: 320px;
+    }
+
+    &:nth-child(4) {
+      display: block;
+      transform: translate(50%, -130%);
+      width: 200px;
+    }
+
+    &:nth-child(5) {
+      display: block;
+      transform: translate(-130%, 50%);
+      width: 200px;
+    }
+  }
+}
+
+@include up(md) {
+  .poster {
+    &:nth-child(1) {
+      display: block;
+      transform: translate(-110%, -80%);
+      width: 520px;
+    }
+
+    &:nth-child(3) {
+      display: block;
+      transform: translate(3%, -5%);
+      width: 520px;
+    }
+
+    &:nth-child(4) {
+      display: block;
+      transform: translate(0%, -115%);
+      width: 500px;
+    }
+
+    &:nth-child(5) {
+      display: block;
+      transform: translate(-120%, 46%);
+      width: 380px;
+    }
+  }
+}

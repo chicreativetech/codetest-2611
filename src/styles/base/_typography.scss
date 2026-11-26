@@ -1,0 +1,17 @@
+@use '../abstracts' as *;
+
+body {
+  font-family: $font-family;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
